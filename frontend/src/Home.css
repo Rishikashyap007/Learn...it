@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* .home_body{
+    background: rgb(1, 0, 14);
+background: radial-gradient(circle, rgb(74, 70, 166) 0%, rgb(52, 2, 169) 30%, rgb(8, 8, 8) 100%);
+    color: white;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width:100%;
+    margin:0%;
+    padding:5%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.first_heading{
+    margin:0%;
+    font-size:40px;
+    padding: 1%;
+    color: rgb(245, 241, 241);
+}
+
+.btn1_landing_page{
+    font-size: x-large;
+    margin:1%;
+    padding:1%;
+    border-radius: 10px;
+    background-color: beige;
+    box-shadow: rgba(6, 10, 222, 0.63) 2px 3px;
+}
+.first_line{
+    font-size: x-large;
+    color: rgb(178, 170, 170);
+}
+.line{
+    height:1px;
+    width:20%;
+    background-color: white;
+    margin-left: 40%;
+    margin-bottom: 2%;
+    margin-top: 3%;
+}
+.Homeimg{
+   width:60%;
+   height:auto;
+}
+
+@media only screen and(max-width:768px){
+    .home_body{
+        width:100%;
+        padding:0%;
+    }
+    .Home_div{
+        overflow-x: hidden;
+    }
+    
+}
+@media screen and (max-width:320px) {
+    .Home_div{
+        overflow-x: hidden;
+    } 
+}
+@media screen and (max-width:768px){
+    .first_heading{
+      margin-bottom: 10px;
+      padding: 1rem;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 48px;
+  }
+  } */

@@ -1,0 +1,52 @@
+.Section-page-simple {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .Section-page-p {
+    flex: 1;
+  }
+  
+  .Section-page-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .Section-page-btn button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Section-page-btn button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Optional: Adjust button styles for better alignment */
+  .Section-page-btn {
+    margin-top: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .Section-page-simple {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .Section-page-img {
+      margin-top: 20px;
+    }
+  
+    .Section-page-btn {
+      margin-top: 20px;
+    }
+  }
+  

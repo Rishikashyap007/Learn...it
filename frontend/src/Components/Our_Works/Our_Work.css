@@ -1,0 +1,161 @@
+.our-work-title {
+    padding-top: 72px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    background: #f9742c;
+    background-clip: content-box;
+    line-height: 2;
+}
+
+.our-work-section{
+  width: 100%;  
+}
+
+.work-card {
+ display: flex;
+}
+
+
+
+.work-left {
+    position: relative;
+}
+
+.work-left::before {
+    content: "";
+    position: absolute;
+    background: url(https://www.finoit.com/wp-content/themes/finoit/assets/layouts/img/sprites.svg?v=2.20) no-repeat;
+    width: 53px;
+    height: 53px;
+    background-position: -129px -4895px;
+    right: 69px;
+    top: -26px;
+}
+
+.work-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.work-right {
+
+}
+
+/* .work-content-card {
+    max-width: 420px;
+} */
+
+.work-content-card h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.work-content-card p {
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.work-live-btn {
+    color: #fff;
+    background: #f9742c;
+    /* cursor: pointer; */
+    border: 0;
+    font-size: 15px;
+    padding: 16px 22px 13px;
+    font-weight: 500;
+    line-height: 1;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 2px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, 
+}
+.work-live-btn:hover {
+    background: #f98d53;
+}
+
+.work-live-btn.disable {
+    cursor: not-allowed;
+    pointer-events: none;
+    background: #f79c6a;
+}
+
+@media only screen and (min-width: 1024px) {
+    
+    .our-work-section {
+        padding: 80px 5px;
+    }
+
+    .work-card {
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .work-content-card {
+        margin: 0 80px;
+    }
+
+    .work-content-card h3 {
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+}
+
+@media (min-width:768px) {
+    .work-left {
+        width: 50%;
+    }
+
+    .work-right {
+        width: 50%;
+    }
+
+    .work-card:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+}
+
+@media (min-width:768px) and (max-width:1023px){
+    .our-work-section {
+        padding: 50px 5px;
+    }
+
+    .work-card {
+        margin-bottom: 40px;
+        align-items: center;
+    }
+
+    .work-content-card {
+        margin: 20px 30px;
+    }
+
+    .work-content-card h3 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .our-work-section {
+        padding: 40px 5px;
+    }
+
+    .work-card {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .work-content-card {
+        padding: 20px 20px 46px;
+    }
+
+    .work-content-card h3 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,72 @@
+/* Styles for the main container */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Styles for each testimonial section */
+  .testimonials-section {
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for author info */
+  .author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .author-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .author-info {
+    font-size: 14px;
+  }
+  
+  .author-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .author-describtion {
+    color: #888;
+  }
+  
+  /* Styles for highlight content */
+  .highlight-content {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for testimonial content */
+  .content {
+    font-style: italic;
+    font-size: 16px;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (min-width: 768px) {
+    /* Adjusting layout for larger screens */
+    main {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  
+    .testimonials-section {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    /* Adjusting layout for even larger screens */
+    .testimonials-section {
+      flex-basis: calc(33.33% - 20px);
+    }
+  }
+  

@@ -1,0 +1,136 @@
+body {
+  background: #f2f1ec;
+}
+
+.container-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.div-one {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.categories-container {
+  margin-top: 32px;
+}
+
+.categories-container h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.categories-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-item {
+  margin-left: 8px;
+  margin-bottom: 16px;
+}
+
+.category-item a {
+  display: block;
+  padding: 8px 16px;
+  background-color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.category-item a:hover {
+  background-color: #ddd;
+}
+
+input[type="text"] {
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+button {
+  border: none;
+  padding: 15px;
+  color: white;
+  background-color: #314896;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: darkblue;
+}
+
+.div-one-1 {
+  height: 20px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container-main {
+    padding: 0 100px;
+  }
+
+  .div-one {
+    width: calc(50% - 100px);
+    float: center;
+  }
+
+  .div-one-1 {
+    width: calc(50% - 100px);
+    float: center;
+  }
+}
+
+.container-trending {
+  padding: 0 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  text-align: left;
+}
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  text-align: left;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-button,
+.save-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.jobCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.pictwo {
+  margin-top: 20px;
+}

@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+}
+
+#a {
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: left;
+  margin-left: 8px;
+}
+
+.login-btn button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 8px;
+}
+
+.google-btn {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.facebook-btn {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.apple-btn {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+form {
+  margin-top: 8px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 88%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+}
+
+.login-btn {
+  background-color: #8710d8;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 287px;
+}
+
+.forgot-password,
+.sign-up,
+.org-login {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8710d8;
+}
+
+.forgot-password:hover,
+.sign-up:hover,
+.org-login:hover {
+  color: #401b9c;
+}
+@media screen and (max-width: 768px) {
+  .login-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
