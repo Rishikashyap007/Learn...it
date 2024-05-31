@@ -12,7 +12,7 @@ function CartProducts({ course }) {
   const handleremovefromCart = async (courseID) => {
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/users/remove/${courseID}`,
+        `https://learn-it-zl9y.onrender.com/api/users/remove/${courseID}`,
         {
           userId,
         }

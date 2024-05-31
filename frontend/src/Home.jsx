@@ -14,7 +14,7 @@ import axios from 'axios'
 
     
             // useEffect(()=>{
-            //     axios.get('http://localhost:5000/api/users/allusers')
+            //     axios.get('https://learn-it-zl9y.onrender.com/api/users/allusers')
             //     .then(res=>console.log(res))
             //     .catch((err)=>console.log(err))
             // },[])

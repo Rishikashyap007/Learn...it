@@ -9,7 +9,7 @@ const CourseDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/users/coursedetails/${id}`)
+      .get(`https://learn-it-zl9y.onrender.com/api/users/coursedetails/${id}`)
       .then((res) => setCourse(res.data.courseDetails))
       .catch((err) => console.log(err));
   }, [id]);
@@ -18,7 +18,7 @@ const CourseDetails = () => {
   const token = localStorage.getItem("token");
 
   const handleCart = async (courseID) => {
-    axios.post("http://localhost:5000/api/users/addtocart", { courseID, userid })
+    axios.post("https://learn-it-zl9y.onrender.com/api/users/addtocart", { courseID, userid })
       .then((res) => {
         toast.success("Course added successfully...");
         console.log(res);

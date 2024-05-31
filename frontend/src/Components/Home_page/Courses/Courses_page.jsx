@@ -9,7 +9,7 @@
 // //   const [courses, setCourses] = useState([]);
   
 // //   useEffect(() => {
-// //     axios.get("http://localhost:5000/api/users/courses")
+// //     axios.get("https://learn-it-zl9y.onrender.com/api/users/courses")
 // //       .then((res) => setCourses(res.data.data))
 // //       .catch((err) => console.log(err));
 // //   }, []);
@@ -18,7 +18,7 @@
 // //   const token = localStorage.getItem('token');
   
 // //   const handleCart = async (courseID) => {
-// //     axios.post("http://localhost:5000/api/users/addtocart", { courseID, userid })
+// //     axios.post("https://learn-it-zl9y.onrender.com/api/users/addtocart", { courseID, userid })
 // //       .then((res) => {
 // //         toast.success("Course added successfully...");
 // //         console.log(res);
@@ -80,7 +80,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:5000/api/users/courses")
+//       .get("https://learn-it-zl9y.onrender.com/api/users/courses")
 //       .then((res) => {
 //         setCourses(res.data.data);
 //         setFilteredCourses(res.data.data);
@@ -93,7 +93,7 @@
 
 //   const handleCart = async (courseID) => {
 //     axios
-//       .post("http://localhost:5000/api/users/addtocart", { courseID, userid })
+//       .post("https://learn-it-zl9y.onrender.com/api/users/addtocart", { courseID, userid })
 //       .then((res) => {
 //         toast.success("Course added successfully...");
 //         console.log(res);
@@ -175,7 +175,7 @@ const Courses = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users/courses")
+      .get("https://learn-it-zl9y.onrender.com/api/users/courses")
       .then((res) => {
         setCourses(res.data.data);
         setFilteredCourses(res.data.data);
@@ -188,7 +188,7 @@ const Courses = () => {
 
   const handleCart = async (courseID) => {
     axios
-      .post("http://localhost:5000/api/users/addtocart", { courseID, userid })
+      .post("https://learn-it-zl9y.onrender.com/api/users/addtocart", { courseID, userid })
       .then((res) => {
         toast.success("Course added successfully...");
         console.log(res);

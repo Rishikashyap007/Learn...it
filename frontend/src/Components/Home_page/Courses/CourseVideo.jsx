@@ -11,7 +11,7 @@ export default function CourseVideo() {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/users/enrolledCourse/${id}`);
+        const response = await axios.get(`https://learn-it-zl9y.onrender.com/api/users/enrolledCourse/${id}`);
         setCourse(response.data);
       } catch (err) {
         setError(err.message);

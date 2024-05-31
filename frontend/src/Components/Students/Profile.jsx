@@ -10,7 +10,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get(`http://localhost:5000/api/users/userbyId/${id}`)
+//       .get(`https://learn-it-zl9y.onrender.com/api/users/userbyId/${id}`)
 //       .then((res) => {
 //         setUser(res.data.data);
 //         setLoading(false);
@@ -98,7 +98,7 @@ function Profile() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/users/userbyId/${id}`)
+      .get(`https://learn-it-zl9y.onrender.com/api/users/userbyId/${id}`)
       .then((res) => {
         setUser(res.data.data);
         setLoading(false);

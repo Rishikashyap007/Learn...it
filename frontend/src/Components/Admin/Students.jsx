@@ -9,7 +9,7 @@ function Students() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users/allusers")
+      .get("https://learn-it-zl9y.onrender.com/api/users/allusers")
       .then((res) => {
         console.log(res.data.data);
         setUsers(res.data.data);

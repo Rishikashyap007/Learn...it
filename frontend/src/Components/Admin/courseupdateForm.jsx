@@ -23,7 +23,7 @@ function CourseUpdateForm() {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/users/coursedetails/${id}`)
+    axios.get(`https://learn-it-zl9y.onrender.com/api/users/coursedetails/${id}`)
       .then((res) => {
         const courseDetails = res.data.courseDetails;
         setCourse(courseDetails);
@@ -63,7 +63,7 @@ function CourseUpdateForm() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/users/courseupdate/${id}`,
+        `https://learn-it-zl9y.onrender.com/api/users/courseupdate/${id}`,
         formData
       );
       if (response.status === 200) {

@@ -12,7 +12,7 @@ function Cart() {
   // console.log(userId.id)
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/users/cartitems/${userId.id}`)
+      .get(`https://learn-it-zl9y.onrender.com/api/users/cartitems/${userId.id}`)
       .then((res) => setcourses(res.data.data))
       .catch((err) => console.log(err));
   }, [courses]);

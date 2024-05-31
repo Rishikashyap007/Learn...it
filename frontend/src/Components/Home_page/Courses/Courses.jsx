@@ -10,7 +10,7 @@ const Courses = () => {
   const [courses, setCourses] = useState([]);
   
   useEffect(() => {
-    axios.get("http://localhost:5000/api/users/courses")
+    axios.get("https://learn-it-zl9y.onrender.com/api/users/courses")
       .then((res) => setCourses(res.data.data))
       .catch((err) => console.log(err));
   }, []);
@@ -18,7 +18,7 @@ const Courses = () => {
   const userid = localStorage.getItem("userid");
 
   const handleCart = async (courseID) => {
-    axios.post("http://localhost:5000/api/users/addtocart", { courseID, userid })
+    axios.post("https://learn-it-zl9y.onrender.com/api/users/addtocart", { courseID, userid })
       .then((res) => {
         toast.success("Course added successfully...");
         console.log(res);

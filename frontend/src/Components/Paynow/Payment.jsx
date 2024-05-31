@@ -13,7 +13,7 @@ const PaymentForm = () => {
   const userId = JSON.parse(localStorage.getItem("userid")).id;
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/users/coursedetails/${id}`)
+    axios.get(`https://learn-it-zl9y.onrender.com/api/users/coursedetails/${id}`)
       .then((res) => setCourse(res.data.courseDetails))
       .catch((err) => console.log(err));
   }, [id]);
@@ -29,7 +29,7 @@ const PaymentForm = () => {
   const handlePayNowClick = async (e) => {
     if(token){
 
-      const response = await fetch('http://localhost:5000/payment/order',{
+      const response = await fetch('https://learn-it-zl9y.onrender.com/payment/order',{
         method: 'POST',
 
         headers:{
@@ -60,7 +60,7 @@ const PaymentForm = () => {
             ...response,
           }
 
-          const validateRes =  await fetch("http://localhost:5000/payment/verification",{
+          const validateRes =  await fetch("https://learn-it-zl9y.onrender.com/payment/verification",{
             method:"POST",
             headers:{
               "Content-Type":"application/json",
@@ -73,7 +73,7 @@ const PaymentForm = () => {
           if(res.message === "success"){
             // alert("payment successful");
             toast.success("Payment Successful!")
-            await axios.post(`http://localhost:5000/api/users/enroll/${userId}`,
+            await axios.post(`https://learn-it-zl9y.onrender.com/api/users/enroll/${userId}`,
               {courseid: course._id,}
              )
              .then((res)=>
