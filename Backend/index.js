@@ -12,7 +12,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended:false}));
 
 app.use(cors({
-    origin: "http://localhost:5173", // replace with your frontend URL
+    origin: "https://learnittt.netlify.app/",
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
