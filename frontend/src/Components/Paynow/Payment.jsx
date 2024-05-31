@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import QR from './QRcode.png'; // Uncomment this line and add the correct path to the QR code image
 import toast from 'react-hot-toast';
 
 const PaymentForm = () => {
@@ -72,7 +71,8 @@ const PaymentForm = () => {
           const res = await validateRes.json();
           console.log(res.message)
           if(res.message === "success"){
-            alert("payment successful");
+            // alert("payment successful");
+            toast.success("Payment Successful!")
             await axios.post(`http://localhost:5000/api/users/enroll/${userId}`,
               {courseid: course._id,}
              )
@@ -84,6 +84,9 @@ const PaymentForm = () => {
               console.log(err)})
             navigate(`/video/${course._id}`)
 
+          }
+          else{
+            navigate('/login')
           }
 
       },  

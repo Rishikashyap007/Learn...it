@@ -35,14 +35,14 @@ const Footer=()=>{
         <div className="sb__footer-links_div">
         <h4>Policy and Sitemap</h4>
         <Link to="terms">
-            <p>Terms</p>
+            <p>Terms & Conditions</p>
         </Link>
-        <Link to="p&p">
+        <Link to="/privacy">
             <p>Privacy  Policy</p>
         </Link>
-        <Link to="terms">
+        {/* <Link to="terms">
             <p>Sitemap</p>
-        </Link>
+        </Link> */}
         </div>
         <div className="sb__footer-links_div">
         <h4>About us</h4>
@@ -66,13 +66,13 @@ const Footer=()=>{
       <div className="sb__footer-below">
         <div className="sb__footer-copyright">
             <p>
-                 @{new Date().getFullYear()} TENAI. all right reserved
+                 @{new Date().getFullYear()} Learn..it. all right reserved
             </p>
         </div>
         <div className="sb__footer-below-links">
             <Link to="terms"><div><p>Terms & Conditions</p></div></Link>
             <Link to="terms"><div><p>Security</p></div></Link>
-            <Link to="terms"><div><p>Cookie Declaration</p></div></Link>
+            {/* <Link to="terms"><div><p>Cookie Declaration</p></div></Link> */}
            
         </div>
       </div>

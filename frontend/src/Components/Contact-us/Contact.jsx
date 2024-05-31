@@ -206,7 +206,7 @@ const Contactus = () => {
     setLoading(true);
     const toastId = toast.loading("Loading...");
     try {
-      const res = await axios.post("https://ten-one.vercel.app/api/v1/contact", formData);
+      const res = await axios.post("http://localhost:5000/api/users/contact", formData);
 
       toast.success("Email Sent Successfully");
 

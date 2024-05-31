@@ -19,40 +19,56 @@ const FAQ = () => {
             onClick={() => toggleAccordion(index)}
           >
             <div className="accordion__question bg-transparent">
-              <p >{faq.question}</p>
+              <p>{faq.question}</p>
             </div>
-            <div className="accordion__answer">
-              <p>{faq.answer}</p>
-            </div>
+            {activeIndex === index && (
+              <div className="accordion__answer">
+                <p>{faq.answer}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
     </div>
   );
 };
+
 const faqData = [
   {
-    question: "What is Pay after Placement?",
+    question: "What is Learn...it?",
     answer:
-      "Pay After Placement is a payment model where students cover tuition fees after securing a job. Instead of upfront payments, students agree to pay a portion of their salary or a fixed amount post-employment. This approach aims to alleviate financial barriers to education and aligns tuition costs with students' career success. However, it's essential for students to understand and agree to the terms of repayment",
+      "Learn...it is an advanced eLearning platform that offers a variety of courses across different domains including technology, business, and personal development. Our goal is to provide practical skills and knowledge through high-quality curriculum and experienced instructors."
   },
   {
-    question: "Do you get people placed?",
+    question: "How does the eLearning platform work?",
     answer:
-      `on our e-learning platform reflects interest in our job placement assistance. We offer comprehensive support to help learners secure relevant positions post-completion. While we cannot guarantee placement, we equip individuals with skills and resources to enhance their employability. Success in finding employment depends on various factors, including market demand and individual efforts.`
-
+      "Our eLearning platform provides an interactive learning experience with video lectures, quizzes, assignments, and real-time feedback. Students can access the content at their own pace and participate in live sessions with instructors and peers."
   },
   {
-    question: "How to get funding by US?",
+    question: "What types of courses does Learn...it offer?",
     answer:
-      "We give chance to our top students to get funded by us. The funding amount can go upto 20Lakh",
+      "Learn...it offers courses in various fields such as programming, data science, digital marketing, entrepreneurship, and more. Each course is designed to provide practical skills that are directly applicable to the industry. Check our course catalog for more details."
   },
   {
-    question: "Is it worth to pursue a course with US?",
+    question: "Are the courses self-paced?",
     answer:
-      "Yes, pursuing a course with Learn...it can be beneficial for your e-learning platform. Through their programs, you'll gain valuable insights into creating a compelling business plan and accessing funding opportunities. Engaging with mentors and participating in pitch competitions can significantly enhance your chances of securing financial support and accelerating your platform's growth. However, success ultimately depends on your commitment and ability to leverage the resources",
+      "Yes, many of our courses are self-paced, allowing you to learn at your own speed. However, we also offer instructor-led courses and live sessions for a more structured learning experience."
   },
-  
+  {
+    question: "How do I enroll in a course?",
+    answer:
+      "To enroll in a course, simply visit our website, browse the course catalog, select the course you are interested in, and follow the enrollment instructions. You will need to create an account if you do not have one already."
+  },
+  {
+    question: "What support is available to students?",
+    answer:
+      "Learn...it offers comprehensive support including access to instructors, discussion forums, and technical support. Additionally, we provide career services such as resume reviews and interview preparation to help you achieve your career goals."
+  },
+  {
+    question: "Is there a certificate upon course completion?",
+    answer:
+      "Yes, upon successful completion of a course, you will receive a certificate that you can share with potential employers and add to your professional portfolio."
+  },
 ];
 
 export default FAQ;

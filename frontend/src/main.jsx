@@ -36,6 +36,8 @@ import { persistor, store } from "./app/store.js";
 import { PersistGate } from "redux-persist/integration/react";
 import CourseUpdateForm from "./Components/Admin/courseupdateForm.jsx";
 import CourseVideo from "./Components/Home_page/Courses/CourseVideo.jsx";
+import Privacy from "./Components/PrivacyPolicy/Privacy.jsx";
+import Terms from "./Components/PrivacyPolicy/Terms.jsx";
 
 const router = createBrowserRouter([
   {
@@ -64,7 +66,9 @@ const router = createBrowserRouter([
       {path:'/profile/:id',element:<Profile />},
       {path:'/payment/:id',element:<Payment />},
       {path:'/cart',element:<Cart />},
-      {path:'/video/:id',element:<CourseVideo />}
+      {path:'/video/:id',element:<CourseVideo />},
+      {path:'/privacy',element:<Privacy />},
+      {path:'/terms',element:<Terms />},
     ],
   },
   {

@@ -22,10 +22,12 @@ dotenv.config()
 import Route from "./Routes/userRoute.js";
 import courseRoute from "./Routes/courseRoute.js";
 import cartRoute from "./Routes/cartRoute.js";
+import contactRouter from "./Routes/contactRoute.js";
 
 app.use('/api/users', Route)
 app.use('/api/users',courseRoute)
 app.use('/api/users',cartRoute)
+app.use('/api/users',contactRouter)
 
 app.post('/payment/order',async (req,res)=>{
   console.log("here")
