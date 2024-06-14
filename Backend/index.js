@@ -12,7 +12,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended:false}));
 
 app.use(cors({
-    origin: "https://learniitt.netlify.app",
+    origin: "https://learn-it-mocha.vercel.app",
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
