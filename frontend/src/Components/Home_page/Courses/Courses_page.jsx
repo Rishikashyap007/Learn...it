@@ -311,9 +311,9 @@ const Courses = () => {
     axios
       .get("https://learn-it-zl9y.onrender.com/api/users/courses")
       .then((res) => {
+        setLoading(false);
         setCourses(res.data.data);
         setFilteredCourses(res.data.data);
-        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -367,7 +367,7 @@ const Courses = () => {
         />
       </div>
       {loading ? (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center ">
           <Circles color="#00BFFF" height={80} width={80} />
         </div>
       ) : (
