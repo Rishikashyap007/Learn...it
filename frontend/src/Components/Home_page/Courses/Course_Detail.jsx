@@ -2,37 +2,56 @@
 // import { useParams, Link } from "react-router-dom";
 // import axios from "axios";
 // import { toast } from "react-hot-toast";
+// import { Circles } from 'react-loader-spinner';
 
 // const CourseDetails = () => {
 //   const [course, setCourse] = useState(null);
+//   const [loading, setLoading] = useState(true);
 //   const { id } = useParams();
 
 //   useEffect(() => {
-//     axios
-//       .get(`https://learn-it-zl9y.onrender.com/api/users/coursedetails/${id}`)
-//       .then((res) => setCourse(res.data.courseDetails))
-//       .catch((err) => console.log(err));
+//     const fetchCourseDetails = async () => {
+//       try {
+//         const res = await axios.get(`https://learn-it-zl9y.onrender.com/api/users/coursedetails/${id}`);
+//         setCourse(res.data.courseDetails);
+//       } catch (err) {
+//         console.error(err);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchCourseDetails();
 //   }, [id]);
 
 //   const userid = localStorage.getItem("userid");
 //   const token = localStorage.getItem("token");
 
 //   const handleCart = async (courseID) => {
-//     axios.post("https://learn-it-zl9y.onrender.com/api/users/addtocart", { courseID, userid })
-//       .then((res) => {
-//         toast.success("Course added successfully...");
-//         console.log(res);
-//       })
-//       .catch((err) => console.log(err));
+//     try {
+//       const res = await axios.post("https://learn-it-zl9y.onrender.com/api/users/addtocart", { courseID, userid });
+//       toast.success("Course added successfully...");
+//       console.log(res);
+//     } catch (err) {
+//       console.error(err);
+//     }
 //   };
+
+//   if (loading) {
+//     return (
+//       <div className="flex justify-center items-center min-h-screen">
+//         <Circles color="#00BFFF" height={80} width={80} />
+//       </div>
+//     );
+//   }
 
 //   if (!course) {
 //     return <div className="text-center mt-8 text-xl">Course not found</div>;
 //   }
 
 //   return (
-//     <div className="flex justify-center items-center min-h-screen bg-gray-100 ">
-//       <div className="md:w-[90vw] w-full bg-white p-6 md:p-8 rounded-lg shadow-md ">
+//     <div className="flex justify-center items-center min-h-screen bg-gray-100">
+//       <div className="md:w-[90vw] w-full bg-white p-6 md:p-8 rounded-lg shadow-md">
 //         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between items-center">
 //           <div className="flex justify-center items-center">
 //             <img
@@ -78,7 +97,7 @@
 
 
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { TailSpin } from 'react-loader-spinner';
@@ -87,6 +106,7 @@ const CourseDetails = () => {
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchCourseDetails = async () => {
@@ -113,6 +133,14 @@ const CourseDetails = () => {
       console.log(res);
     } catch (err) {
       console.error(err);
+    }
+  };
+
+  const handleBuyNow = (courseID) => {
+    if (token) {
+      history.push(`/payment/${courseID}`);
+    } else {
+      history.push("/login");
     }
   };
 
@@ -151,11 +179,12 @@ const CourseDetails = () => {
               Price: <span className="text-red-600">{course.price} Rs</span>
             </div>
             <div className="flex flex-col md:flex-row justify-start md:space-x-4">
-              <Link to={`/payment/${course._id}`}>
-                <button className="py-3 px-6 bg-red-500 text-xl text-white rounded-lg shadow-md hover:bg-red-600 transition duration-300 w-full md:w-auto">
-                  Buy Now
-                </button>
-              </Link>
+              <button
+                onClick={() => handleBuyNow(course._id)}
+                className="py-3 px-6 bg-red-500 text-xl text-white rounded-lg shadow-md hover:bg-red-600 transition duration-300 w-full md:w-auto"
+              >
+                Buy Now
+              </button>
               {token && (
                 <button
                   onClick={() => handleCart(course._id)}
