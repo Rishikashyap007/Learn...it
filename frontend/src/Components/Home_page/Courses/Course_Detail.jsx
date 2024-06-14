@@ -72,7 +72,7 @@ const CourseDetails = () => {
               Price: <span className="text-red-600">{course.price} Rs</span>
             </div>
             <div className="flex flex-col md:flex-row justify-start md:space-x-4">
-              <Link to={`/payment/${course._id}`}>
+              <Link to={token ? `/payment/${course._id}` : "/login"}>
                 <button className="py-3 px-6 bg-red-500 text-xl text-white rounded-lg shadow-md hover:bg-red-600 transition duration-300 w-full md:w-auto">
                   Buy Now
                 </button>
